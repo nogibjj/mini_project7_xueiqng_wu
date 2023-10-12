@@ -1,7 +1,7 @@
 [![CI](https://github.com/nogibjj/mini_project6_xueqing_wu/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/mini_project6_xueqing_wu/actions/workflows/cicd.yml)
 
 ## Purpose
-The goal of this project is to create a database and query the data on the cloud using Azure Databricks. Create data pipelin (ETL) and write query (including join, aggregation, and sorting).
+The goal of this step is to pack everything together for all the ETL process so that other users can directly pip install and run command 
 
 Dataset source: Birth data from github (https://github.com/fivethirtyeight/data)
 
