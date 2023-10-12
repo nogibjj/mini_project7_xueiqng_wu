@@ -16,16 +16,14 @@ def handle_arguments(args):
         choices=[
             "extract",
             "transform_load",
-            "update_record",
-            "delete_record",
-            "create_record",
             "general_query",
-            "read_data",
         ],
+        # shows how to run output
+        # add a help line to help users understand how to use the file
+        help="""Action to perform (extract, transform_load, general_query). 
+       """,
     )
     args = parser.parse_args(args[:1])
-    print(args.action)
-
     if args.action == "general_query":
         parser.add_argument("query")
 
@@ -45,6 +43,7 @@ def main():
         load()
     elif args.action == "general_query":
         general_query(args.query)
+        # fixes output so need to include this
 
     else:
         print(f"Unknown action: {args.action}")

@@ -9,9 +9,6 @@ format:
 	black *.py 
 
 lint:
-	#disable comment to test speed
-	#pylint --disable=R,C --ignore-patterns=test_.*?py *.py mylib/*.py
-	#ruff linting is 10-100X faster than pylint
 	ruff check *.py mylib/*.py
 
 container-lint:
@@ -26,7 +23,7 @@ all: install lint test format deploy
 
 generate_and_push:
 	# Create the markdown file 
-	python test_main.py  # Replace with the actual command to generate the markdown
+	python test_main.py 
 
 	# Add, commit, and push the generated files to GitHub
 	@if [ -n "$$(git status --porcelain)" ]; then \
@@ -40,10 +37,12 @@ generate_and_push:
 	fi
 
 extract:
-	python main.py extract
+	etl_query extract
 
 transform_load: 
-	python main.py transform_load
+	etl_query transform_load
 
 query:
-	python main.py general_query "Select Year, Month, Day_Of_Month, sum(births) as The_Number_of_Birth FROM birth1 INNER JOIN birth2 ON birth1.id = birth2.id Group By Year, Month, Day_Of_Month ORDER BY The_Number_of_Birth Desc LIMIT 10"
+	etl_query general_query "Select Year, Month, Day_Of_Month, sum(births) as The_Number_of_Birth FROM birth1 INNER JOIN birth2 ON birth1.id = birth2.id Group By Year, Month, Day_Of_Month ORDER BY The_Number_of_Birth Desc LIMIT 10"
+setup_package: 
+	python setup.py develop --user
