@@ -36,8 +36,8 @@ The difference between install package and install local package is that, instal
 
 
 ## Workflow
-<img width="981" alt="Workflow" src="https://github.com/nogibjj/mini_project6_xueqing_wu/assets/47194238/8075d9ea-c034-4b25-a12b-76f2c982b43d">
+<img width="995" alt="Workflow" src="https://github.com/nogibjj/mini_project7_xueiqng_wu/assets/47194238/0170b6cc-0b20-47eb-8df7-e99cd68f6e81">
 
 ## Tests
-<img width="952" alt="Test" src="https://github.com/nogibjj/mini_project6_xueqing_wu/assets/47194238/13d3dfc8-a0ca-4540-afef-cfa7f1207bee">
+<img width="793" alt="test" src="https://github.com/nogibjj/mini_project7_xueiqng_wu/assets/47194238/3b48e1ea-58de-4fdd-a9f5-139a35d2da96">
 
